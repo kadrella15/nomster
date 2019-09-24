@@ -1,4 +1,8 @@
 Rails.application.configure do
+  config.action_mailer.default_url_options = { host: 'localhost:3030' }
+
+  # a bunch of other stuff........
+end
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -59,3 +63,4 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 end
+

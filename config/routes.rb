@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
- root 'places#index'
- resources :places
+  devise_for :installs
+  root 'places#index'
+  resources :places
 end
