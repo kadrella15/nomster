@@ -107,10 +107,9 @@
   <%= f.submit "Submit Caption", class: 'btn btn-primary' %>
 <% end %>
 
-<%= @place.photos.each do |photo| %>
+<% @place.photos.each do |photo| %>
   <div>
     <b><%= photo.caption %></b>
-     <small><%= photo.user.email %></small>
     </blockquote>
   </div>
 <% end %>
