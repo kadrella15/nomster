@@ -117,25 +117,24 @@
         </button>
         <h4 class="modal-title" id="myModal2Label">Upload photo</h4>
       </div>
-      <div class="modal-body">
-        <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+        <div class="modal-body">
           <%= f.input :picture %>
           <%= f.input :caption %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <%= f.submit "Submit Caption", class: 'btn btn-primary' %>
-      </div>
-     <% end %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <%= f.submit "Submit Caption", class: 'btn btn-primary' %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
 
 <% @place.photos.each do |photo| %>
   <div>
-    <%= image_tag photo.picture_url.to_s %>
+    <%= image_tag photo.picture_url.to_s, class:"col-4" %>
     <b><%= photo.caption %></b>
-    </blockquote>
   </div>
 <% end %>
 
