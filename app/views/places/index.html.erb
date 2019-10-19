@@ -5,13 +5,14 @@
     <% if place.photos.present? %>
     <%= image_tag place.photos.last.picture_url.to_s, :class => "col-8" %>
     <% end %>
-    <h1><%= link_to place.name, place_path(place) %></h1><br />
-  <i><%= place.address %></i><br /><br />
-  <p><%= place.description %></p><br />
 
-  <% if place.user.present? %>
-    <small><%= place.user.email %></small>
-  <% end %>
+    <h1><%= link_to place.name, place_path(place) %></h1><br />
+      <i><%= place.address %></i><br /><br />
+      <p><%= place.description %></p><br />
+
+      <% if place.user.present? %>
+      <small><%= place.user.email %></small>
+    <% end %>
 
   <% if place.comments.present? %>
    <div class="col-12">
@@ -23,9 +24,8 @@
     <small><%= place.comments.last.user.email %></small>
     </blockquote>
    </div>
-
- </div>
 <% end %>
+ </div>
 <% end %>
 
 
